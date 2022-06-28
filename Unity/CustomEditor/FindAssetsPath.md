@@ -14,7 +14,7 @@ private Object GetSelectFolder()
     var asset = Selection.activeObject;
     DefaultAsset folder = (selectAssets.Length != 0) ? selectAssets[0] : null;
 
-    if (asset == null && folder == null) return m_createFolder;
+    if (asset == null && folder == null) return null;
 
     var obj = (asset != null) ? asset : folder;
 
@@ -40,6 +40,6 @@ private Object GetSelectFolder()
         }
     }
 
-    return m_createFolder;
+    return null;
 }
 ~~~
